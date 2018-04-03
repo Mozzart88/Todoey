@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item {
+class Item: Codable {
     var name: String = ""
     var done: Bool = false
     convenience init (_ name: String, done: Bool) {
