@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Category.swift
 //  Todoey
 //
 //  Created by Ivan Timokhov on 06.04.2018.
@@ -9,9 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Item: Object {
+class Category: Object {
     @objc dynamic var name: String = ""
-    @objc dynamic var done: Bool = false
-    @objc dynamic var dateCreated: Date?
-    let parentCategory = LinkingObjects(fromType: Category.self, property: "items")
+    let items = List<Item>()
 }
